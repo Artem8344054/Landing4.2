@@ -23,7 +23,7 @@
 
 jQuery(document).ready(function () {
 
-	jQuery('form').click(function () {
+	jQuery('form button').click(function () {
 		var form = jQuery(this).closest('form');
 
 		if (form.valid()) {
@@ -39,7 +39,7 @@ jQuery(document).ready(function () {
 					form.html(data);
 					form.css('opacity', '1');
 					form.find('.status').html('form submitted successfully!!!');
-					$('#exampleModal').modal('show') // для бутстрапа
+					// $('#exampleModal').modal('show') // для бутстрапа
 				},
 				error: function () {
 					form.find('.status').html('Error server');
